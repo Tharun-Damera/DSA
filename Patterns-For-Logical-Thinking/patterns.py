@@ -11,11 +11,31 @@ Output:
 * * * * * *
 
 """
-
 def pattern1(n):
 	print("Pattern-1: ")
 	for i in range(n):
 		for j in range(n):
+			print('*', end=' ')
+		print()
+
+
+"""
+Pattern-2: Right-Angled Triangle Pattern
+
+Input Format: N = 6
+Output:
+* 
+* * 
+* * *
+* * * *
+* * * * *
+* * * * * *
+
+"""
+def pattern2(n):
+	print("Pattern-2: ")
+	for i in range(n):
+		for j in range(i+1):
 			print('*', end=' ')
 		print()
 
@@ -26,4 +46,4 @@ def pattern1(n):
 
 num = int(input("Enter n value: "))
 
-pattern1(num)
+pattern2(num)
