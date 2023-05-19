@@ -280,6 +280,18 @@ Output:
 123456654321
 
 """
+def pattern12(n):
+	print("Pattern-12: ")
+	for i in range(1, n+1):
+	    for j in range(1, i+1):
+	        print(j, end="")
+	    for j in range(2*(n-i)):
+	        print(" ", end="")
+	    for j in range(i, 0, -1):
+	        print(j, end="")
+	     
+	    print()
+
 
 
 """
@@ -295,6 +307,14 @@ Output:
 16  17  18  19  20  21
 
 """
+def pattern13(n):
+	val = 1
+	print("Pattern-13: ")
+	for i in range(n):
+	    for j in range(i+1):
+	        print(val, end=" ")
+	        val += 1
+	    print()
 
 """
 Pattern – 14: Increasing Letter Triangle Pattern
@@ -309,6 +329,16 @@ A B C D E
 A B C D E F
 
 """
+def pattern14(n):
+	val = 65
+	print("Pattern-14: ")
+	for i in range(n):
+		for j in range(i+1):
+			ch = chr(val+j)
+			print(ch, end=" ")
+		print()
+
+
 
 """
 Pattern – 15: Reverse Letter Triangle Pattern
@@ -324,6 +354,16 @@ A
 
 """
 
+def pattern15(n):
+	val = 65
+	print("Pattern-15: ")
+	for i in range(n):
+		for j in range(n-i):
+			ch = chr(val+j)
+			print(ch, end=" ")
+		print()
+
+
 """
 Pattern – 16: Alpha-Ramp Pattern
 
@@ -337,6 +377,14 @@ E E E E E
 F F F F F F
 
 """
+def pattern16(n):
+	val = 65
+	print("Pattern-16: ")
+	for i in range(n):
+		for j in range(i+1):
+			ch = chr(val+i)
+			print(ch, end=" ")
+		print()
 
 """
 Pattern – 17: Alpha-Hill Pattern
@@ -351,6 +399,22 @@ Output:
 ABCDEFEDCBA
 
 """
+def pattern17(n):
+	print("Pattern-17: ")
+	for i in range(n):
+		for j in range(n-i-1):
+			print(' ', end='')
+		val = 64
+		for j in range(2*i+1):
+			if j <= (2*i+1)/2:
+				val += 1
+				ch = chr(val)
+			else:
+				val -= 1
+				ch = chr(val)
+			print(ch, end='')
+		print()
+
 
 """
 Pattern – 18: Alpha-Triangle Pattern
@@ -365,6 +429,8 @@ B C D E F
 A B C D E F
 
 """
+
+
 
 """
 Pattern – 19: Symmetric-Void Pattern
@@ -440,4 +506,4 @@ Output:
 
 num = int(input("Enter n value: "))
 
-pattern11(num)
+pattern17(num)
