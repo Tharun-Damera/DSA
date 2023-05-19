@@ -429,8 +429,14 @@ B C D E F
 A B C D E F
 
 """
-
-
+def pattern18(n):
+	print("Pattern-18: ")
+	for i in range(n):
+		val = 65+n-1-i
+		for j in range(val, val+i+1):
+			ch = chr(j)
+			print(ch, end=' ')
+		print()
 
 """
 Pattern – 19: Symmetric-Void Pattern
@@ -451,6 +457,24 @@ Output:
 ************
 
 """
+def pattern19(n):
+	print("Pattern-19: ")
+	for i in range(n, 0, -1):
+		for j in range(1, i+1):
+			print('*', end='')
+		for j in range(2*(n-i)):
+			print(' ', end='')
+		for j in range(1, i+1):
+			print('*', end='')
+		print()
+	for i in range(1, n+1):
+		for j in range(1, i+1):
+			print('*', end='')
+		for j in range(2*(n-i)):
+			print(' ', end='')
+		for j in range(1, i+1):
+			print('*', end='')
+		print()
 
 """
 Pattern – 20: Symmetric-Butterfly Pattern
@@ -470,6 +494,24 @@ Output:
 *          *
 
 """
+def pattern20(n):
+	print("Pattern-20: ")
+	for i in range(1, n+1):
+		for j in range(1, i+1):
+			print('*', end='')
+		for j in range(2*(n-i)):
+			print(' ', end='')
+		for j in range(1, i+1):
+			print('*', end='')
+		print()
+	for i in range(n-1, 0, -1):
+		for j in range(1, i+1):
+			print('*', end='')
+		for j in range(2*(n-i)):
+			print(' ', end='')
+		for j in range(1, i+1):
+			print('*', end='')
+		print()
 
 """
 Pattern – 21: Hollow Rectangle Pattern
@@ -484,6 +526,17 @@ Output:
 ******
 
 """
+def pattern21(n):
+	print("Pattern-21: ")
+	for i in range(n):
+		for j in range(n):
+			if i == 0 or j == 0 or i == n-1 or j == n-1:
+				print('*', end='')
+			else:
+				print(' ', end='')
+		print()
+
+
 
 """
 Pattern – 22: The Number Pattern
@@ -503,7 +556,20 @@ Output:
 6 6 6 6 6 6 6 6 6 6 6
 
 """
+def pattern22(n):
+	print("Pattern-22: ")
+	for i in range(1-n, n):
+		for j in range(1-n, n):
+			if abs(i) < abs(j):
+				print(abs(j)+1, end=' ')
+			else:
+				print(abs(i)+1, end=' ')
+		print()
+
+
+
 
 num = int(input("Enter n value: "))
 
-pattern17(num)
+
+pattern22(num)
