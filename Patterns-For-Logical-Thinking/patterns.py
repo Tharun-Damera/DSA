@@ -140,9 +140,18 @@ Output:
 def pattern7(n):
 	print("Pattern-7: ")
 	for i in range(n):
-		pass
+		for j in range(n-i-1):
+			print(' ', end='')
+		for j in range(i+1):
+			print('*', end='')
+		for j in range(i):
+			print('*', end='')
+		for j in range(n-i-1):
+			print(' ', end='')
+			
+		print()
 
 
 num = int(input("Enter n value: "))
 
-pattern6(num)
+pattern7(num)
