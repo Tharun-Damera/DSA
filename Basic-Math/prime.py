@@ -21,3 +21,10 @@ if is_prime(num):
 	print('It is a prime number.')
 else:
 	print('It is not a prime number.')
+
+
+'''
+    Time complexity : O(√n)
+    Space complexity : O(1)
+'''
+

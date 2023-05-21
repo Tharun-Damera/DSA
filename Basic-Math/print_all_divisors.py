@@ -20,3 +20,9 @@ if num >= 1:
     print_divisors(num)
 else:
     print(f'The number {num} has no divisors.')
+
+
+'''
+    Time complexity : O(√n)
+    Space complexity : O(1)
+'''

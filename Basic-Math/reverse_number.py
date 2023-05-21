@@ -18,3 +18,11 @@ def reverse_num(num):
 
 n = int(input('Enter a number: '))
 print(f'The reverse of the number {n} is {reverse_num(n)}.')
+
+
+
+'''
+    Time complexity : O(log10(n))
+    Space complexity : O(1)
+'''
+

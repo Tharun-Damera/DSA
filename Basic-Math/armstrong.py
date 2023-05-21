@@ -22,3 +22,10 @@ if ans == True:
     print('It is an armstrong number')
 else:
     print('It is not an armstrong number') 
+
+
+'''
+    Time complexity : O(log10(n))
+    Space complexity : O(1)
+'''
+

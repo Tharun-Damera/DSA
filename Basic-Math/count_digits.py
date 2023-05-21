@@ -16,3 +16,10 @@ def count_digits(num):
 
 num = int(input("Enter a number: "))
 print('Number of digits:', count_digits(num))
+
+
+'''
+    Time complexity : O(log10(n))
+    Space complexity : O(1)
+'''
+

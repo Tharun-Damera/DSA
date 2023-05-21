@@ -23,3 +23,10 @@ if ans == True:
     print('It is a palindrome.')
 else:
     print('It is not a palindrome.')
+
+
+'''
+    Time complexity : O(log10(n))
+    Space complexity : O(1)
+'''
+
