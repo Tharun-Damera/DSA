@@ -4,18 +4,17 @@
 
 '''
 
-def sum_of_first_N_numbers(i, total):
+def sum_of_first_N_numbers(n):
 
-	if i == 0:
-		print(total)
-		return
+	if n == 1:
+		return 1
 
-	sum_of_first_N_numbers(i-1, total+i)
-
+	return n + sum_of_first_N_numbers(n-1)
 
 
 n = int(input("Enter n value: "))
-sum_of_first_N_numbers(n, 0)
+ans = sum_of_first_N_numbers(n)
+print(f'The sum of {n} numbers is {ans}.')
 
 '''
 	Time Complexity: O(n)
