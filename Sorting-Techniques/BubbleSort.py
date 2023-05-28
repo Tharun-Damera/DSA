@@ -7,9 +7,9 @@
 def bubble_sort(arr):
 
 	n = len(arr)
-	swap_occurred = False
 
 	for i in range(n-1, 0, -1):
+		swap_occurred = False
 
 		for j in range(i):
 
