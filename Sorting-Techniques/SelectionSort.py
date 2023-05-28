@@ -26,7 +26,7 @@ print('After Sorting using Selection Sort the array is', arr)
 
 
 '''
-	Time Complexity: O(n^2)
+	Time Complexity: O(n^2) -> Best, Average & Worst Case
 	Space Complexity: O(1)
 
 '''
