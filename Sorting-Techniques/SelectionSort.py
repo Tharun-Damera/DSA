@@ -21,8 +21,10 @@ def selection_sort(arr):
 
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
+
+print('\nBefore using Selection Sort:', arr)
 selection_sort(arr)
-print('After Sorting using Selection Sort the array is', arr)
+print('After using Selection Sort:', arr)
 
 
 '''
