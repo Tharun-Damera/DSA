@@ -8,8 +8,7 @@ import sys
 
 def second_min_max(arr):
 
-	n = len(arr)
-	if n < 4:
+	if len(arr) < 4:
 		return -1, -1
 
 	first_max = sec_max = ~sys.maxsize
