@@ -1,6 +1,7 @@
 '''
 	Find Second Smallest and Second Largest Element in an array
-	Problem Statement: Given an array, find the second smallest and second largest element in the array. Print ‘-1’ in the event that either of them doesn’t exist.
+	Problem Statement: Given an array, find the second smallest and second largest element in the array. 
+	Print ‘-1’ in the event that either of them doesn’t exist.
 
 '''
 
@@ -21,14 +22,14 @@ def second_min_max(arr):
 			sec_max = first_max
 			first_max = num
 
-		if num > sec_max and num != first_max:
+		elif num > sec_max and num != first_max:
 			sec_max = num
 
 		if num < first_min:
 			sec_min = first_min
 			first_min = num
 			
-		if num < sec_min and num != first_min:
+		elif num < sec_min and num != first_min:
 			sec_min = num
 
 
