@@ -3,7 +3,7 @@
 
 '''
 
-#1. Brute Force
+# 1. Brute Force
 def remove_duplicates(arr):
 
 	unique = set()
@@ -25,6 +25,31 @@ def remove_duplicates(arr):
 
 '''
 
+
+# 2. Optimal Approach
+def remove_duplicates(arr):
+	n = len(arr)
+
+	if n <= 1:
+		return 
+
+	t1, t2 = 0, 1
+
+	while t2 < n:
+		if arr[t1] == arr[t2]:
+			t2 += 1
+		else:
+			t1 += 1
+			arr[t1] = arr[t2]
+			t2 += 1
+
+	return t1
+
+'''
+	Time Complexity: O(n)
+	Space Complexity: O(1)
+
+'''
 
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
