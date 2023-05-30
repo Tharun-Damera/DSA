@@ -15,6 +15,11 @@ def is_sorted(arr):
 
 	return True
 
+'''
+	Time Complexity: O(n)
+	Space Complexity: O(1)
+
+'''
 
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
@@ -24,10 +29,3 @@ if (is_sorted(arr)):
 else:
 	print('The array is not sorted.')
 
-
-
-'''
-	Time Complexity: O(n)
-	Space Complexity: O(1)
-
-'''

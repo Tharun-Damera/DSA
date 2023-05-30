@@ -15,6 +15,11 @@ def linear_search(arr, element):
 
 	return -1
 
+'''
+	Time Complexity: O(n)
+	Space Complexity: O(1)
+
+'''
 
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
@@ -27,10 +32,3 @@ if index != -1:
 else:
 	print(f'\nThe element {element} is not present in the array {arr}.')
 
-
-
-'''
-	Time Complexity: O(n)
-	Space Complexity: O(1)
-
-'''

@@ -36,6 +36,11 @@ def second_min_max(arr):
 	return sec_min, sec_max
 
 
+'''
+	Time Complexity: O(n)
+	Space Complexity: O(1)
+
+'''
 
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
@@ -45,9 +50,3 @@ sec_min, sec_max = second_min_max(arr)
 print(f'\nSecond Min Value = {sec_min}')
 print(f'Second Max Value = {sec_max}')
 
-
-'''
-	Time Complexity: O(n)
-	Space Complexity: O(1)
-
-'''

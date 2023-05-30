@@ -13,15 +13,15 @@ def find_max(arr):
 
 	return max_value
 
+'''
+	Time Complexity: O(n)
+	Space Complexity: O(1)
+
+'''
+
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
 
 res = find_max(arr)
 print(f'Max Value of {arr} is {res}')
 
-
-'''
-	Time Complexity: O(n)
-	Space Complexity: O(1)
-
-'''
