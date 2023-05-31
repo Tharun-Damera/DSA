@@ -53,6 +53,62 @@ def find_missing_num(arr, n):
 '''
 
 
+##  Optimal Approaches
+#		|
+#		--> Summation (Sum of n natural numbers formula) method
+# 		|
+#		--> XOR method *
+
+
+# 3. Summation Method 
+
+def find_missing_num(arr, n):
+
+	n_sum = n * (n+1) // 2
+
+	arr_sum = 0
+
+	for num in arr:
+		arr_sum += num
+
+	missing_num = n_sum - arr_sum
+
+	return missing_num
+
+
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(1)
+
+'''
+
+
+# 4. XOR Method
+
+def find_missing_num(arr, n):
+
+	xor_n = xor_arr = 0
+
+	for num in range(1, n+1):
+		xor_n = xor_n ^ num
+
+	for num in arr:
+		xor_arr = xor_arr ^ num
+
+	missing_num = xor_n ^ xor_arr
+
+	return missing_num
+
+
+
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(1)
+
+'''
+
+
+
 arr = [int(i) for i in input('\nEnter array elements of A (space separated): ').split()]
 n = int(input('Enter n value: '))
 
