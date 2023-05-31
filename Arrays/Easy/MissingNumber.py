@@ -30,9 +30,27 @@ def find_missing_num(arr, n):
 
 '''
 
+# 2. Better Approach  			--> [Hashing -> Hash array]
+
+def find_missing_num(arr, n):
+
+	hash_arr = [0] * (n+1)
+
+	for num in arr:
+		hash_arr[num] += 1
+
+	for i in range(1, n+2):
+		if hash_arr[i] == 0:
+			return i
+
+	return -1
 
 
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(n)
 
+'''
 
 
 arr = [int(i) for i in input('\nEnter array elements of A (space separated): ').split()]
