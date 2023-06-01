@@ -28,6 +28,28 @@ def get_single_element(arr):
 '''
 
 
+# 2. Better Approach  --> [Using dictionary]
+
+def get_single_element(arr):
+
+	freq = {}
+
+	for num in arr:
+		freq[num] = freq.get(num, 0) + 1
+
+	for key, value in freq.items():
+		if value == 1:
+			return key
+
+	return -1
+
+
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(n)
+
+'''
+
 arr = [int(i) for i in input('\nEnter array elements of A (space separated): ').split()]
 
 element = get_single_element(arr)
