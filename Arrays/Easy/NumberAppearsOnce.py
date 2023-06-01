@@ -50,6 +50,30 @@ def get_single_element(arr):
 
 '''
 
+# 3. Optimal Approach
+
+''' 
+			Uses XOR method :	Two important properties of XOR(^) operator
+								-> A ^ A = 0
+								-> A ^ 0 = A
+'''
+
+def get_single_element(arr):
+
+	xor = 0
+
+	for num in arr:
+		xor = xor ^ num
+
+	return xor
+
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(1)
+
+'''
+
+
 arr = [int(i) for i in input('\nEnter array elements of A (space separated): ').split()]
 
 element = get_single_element(arr)
