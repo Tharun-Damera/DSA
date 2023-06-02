@@ -84,6 +84,12 @@ def longest_subarray_length(arr, k):
 	return max_len
 
 
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(1)
+
+'''
+
 
 arr = [int(i) for i in input('\nEnter array elements of A (space separated): ').split()]
 k = int(input('Enter sum k value: '))
