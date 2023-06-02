@@ -30,6 +30,37 @@ def longest_subarray_length(arr, k):
 
 '''
 
+# 2. Better Approach --> [ Using Hashing & Prefix Sum concept ]
+
+def longest_subarray_length(arr, k):
+
+	n = len(arr)
+	prefix_sum = {}
+	max_len = 0
+	psum = 0
+
+	for i in range(n):
+		psum += arr[i]
+		prefix_sum[psum] = i
+
+		if psum == k:
+			max_len = max(max_len, i+1)
+
+		elif psum > k:
+			if psum - k in prefix_sum:
+				length = i - prefix_sum[psum-k]
+				max_len = max(max_len, length)
+
+	return max_len
+
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(n)
+
+'''
+
+
+
 arr = [int(i) for i in input('\nEnter array elements of A (space separated): ').split()]
 k = int(input('Enter sum k value: '))
 
