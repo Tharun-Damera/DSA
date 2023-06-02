@@ -30,6 +30,7 @@ def longest_subarray_length(arr, k):
 
 '''
 
+
 # 2. Better Approach --> [ Using Hashing & Prefix Sum concept ]
 
 def longest_subarray_length(arr, k):
@@ -58,6 +59,29 @@ def longest_subarray_length(arr, k):
 	Space Complexity: O(n)
 
 '''
+
+
+# 3. Optimal Approach -> [ Using Two Pointers ]
+
+def longest_subarray_length(arr, k):
+
+	n = len(arr)
+	i = j = 0
+	addn = max_len = 0
+
+	while i < n and j < n:
+		addn += arr[j]
+
+		if addn == k:
+			max_len = max(max_len, j - i + 1)
+
+		while addn > k:
+			addn -= arr[i]
+			i += 1
+
+		j += 1
+
+	return max_len
 
 
 
