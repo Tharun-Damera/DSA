@@ -91,7 +91,7 @@ def longest_subarray_length(arr, k):
 '''
 
 
-arr = [int(i) for i in input('\nEnter array elements of A (space separated): ').split()]
+arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
 k = int(input('Enter sum k value: '))
 
 length = longest_subarray_length(arr, k)
