@@ -91,7 +91,7 @@ def search_2D(arr, key):
 
 
 '''
-	Time Complexity: O(log(m*n)) 
+	Time Complexity: O(m+n) 
 	Space Complexity: O(1)
 
 '''
