@@ -96,6 +96,35 @@ def search_2D(arr, key):
 
 '''
 
+# 4. Optimal Approach  ---> [Pure Binary Search  (Treat 2D array as 1D array)]
+
+def search_2D(arr, key):
+
+	m, n = len(arr), len(arr[0])
+
+	low, high = 0, m*n-1
+
+	while low <= high:
+		mid = low + (high - low) // 2
+
+		if key == arr[mid // n][mid % n]:
+			return True
+
+		elif key < arr[mid // n][mid % n]:
+			high = mid - 1
+
+		else:
+			low = mid + 1
+
+	return False
+
+
+'''
+	Time Complexity: O(log(m*n)) 
+	Space Complexity: O(1)
+
+'''
+
 
 rows = int(input('Enter number of rows: '))
 cols = int(input('Enter number of cols: '))
