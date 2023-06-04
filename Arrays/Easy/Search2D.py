@@ -68,6 +68,35 @@ def search_2D(arr, key):
 '''
 
 
+# 3. Better Approach   ---> [Similar to Binary Search (Left / Bottom)]
+
+def search_2D(arr, key):
+
+	m, n = len(arr), len(arr[0])
+
+	i, j = 0, n - 1
+
+	while i < m and j >= 0:
+
+		if key == arr[i][j]:
+			return True
+
+		elif key < arr[i][j]:
+			j -= 1 	# Left 
+
+		else:
+			i += 1  # Bottom
+
+	return False
+
+
+'''
+	Time Complexity: O(log(m*n)) 
+	Space Complexity: O(1)
+
+'''
+
+
 rows = int(input('Enter number of rows: '))
 cols = int(input('Enter number of cols: '))
 
