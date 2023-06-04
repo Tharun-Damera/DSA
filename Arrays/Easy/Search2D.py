@@ -24,7 +24,45 @@ def search_2D(arr, key):
 	return False
 
 '''
-	Time Complexity: O(n^2) 
+	Time Complexity: O(m*n) 
+	Space Complexity: O(1)
+
+'''
+
+
+# 2. Good Approach   --> [Individual row - Binary search]
+
+def binary_search(arr, key):
+
+	low, high = 0, len(arr)-1
+
+	while low <= high:
+		mid = low + (high - low) // 2
+
+		if key == arr[mid]:
+			return True
+		elif key < arr[mid]:
+			high = mid - 1
+		else:
+			low = mid + 1
+
+	return False
+
+
+def search_2D(arr, key):
+
+	m = len(arr)
+
+	for i in range(m):
+
+		if binary_search(arr[i], key) == True:
+			return True
+
+	return False
+
+
+'''
+	Time Complexity: O(m*log(n)) 
 	Space Complexity: O(1)
 
 '''
