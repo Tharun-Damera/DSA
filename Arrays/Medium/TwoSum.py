@@ -52,6 +52,29 @@ def two_sum(arr, summ):
 '''
 
 
+# 3. Optimal Approach  		----> [ Hashing / Dictionary ]
+
+def two_sum(arr, summ):
+
+	n = len(arr)
+	lookup = {}
+
+	for i in range(n):
+
+		if summ - arr[i] in lookup:
+			findex = lookup[summ-arr[i]]
+			return findex, i
+
+		lookup[arr[i]] = i
+
+	return -1, -1
+
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(n) 	-> extra space for the dictionary
+
+'''
+
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
 summ = int(input('Enter the sum value: '))
