@@ -48,7 +48,9 @@ def two_sum(arr, summ):
 '''
 	Time Complexity: O(nlogn) 
 	Space Complexity: O(1)		-> drawback is that the array gets modified (sorted)
-
+		
+	Note: once the arrays is sorted the indices will change from original (so works only when pair elements are required rather than indices)
+	----
 '''
 
 
