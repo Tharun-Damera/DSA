@@ -18,10 +18,39 @@ def two_sum(arr, summ):
 	return -1, -1
 
 '''
-	Time Complexity: O() 
-	Space Complexity: O()
+	Time Complexity: O(n^2) 
+	Space Complexity: O(1)
 
 '''
+
+
+# 2. Better Approach	 --> [ Sorting & Two Pointers ]
+
+def two_sum(arr, summ):
+
+	arr.sort()
+	left, right = 0, len(arr)-1
+
+	while left < right:
+		addn = arr[left] + arr[right]
+
+		if addn == summ:
+			return left, right
+
+		elif addn < summ:
+			left += 1
+
+		else:
+			right -= 1
+
+	return -1, -1
+
+'''
+	Time Complexity: O(nlogn) 
+	Space Complexity: O(1)		-> drawback is that the array gets modified (sorted)
+
+'''
+
 
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
