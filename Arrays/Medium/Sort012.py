@@ -15,9 +15,10 @@ def sort_arr(arr):
 
 '''
 	Time Complexity: O(nlogn) 
-	Space Complexity: O(1) 	-> extra space for the dictionary
+	Space Complexity: O(1) 
 
 '''
+
 
 
 
