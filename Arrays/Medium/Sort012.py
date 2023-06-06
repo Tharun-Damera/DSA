@@ -8,10 +8,10 @@
 
 # 1. Brute Force
 
-# def sort_arr(arr):
+def sort_arr(arr):
 
-# 	arr.sort()
-# 	return
+	arr.sort()
+	return
 
 '''
 	Time Complexity: O(nlogn) 
@@ -49,6 +49,35 @@ def sort_arr(arr):
 
 		else:
 			arr[i] = 2
+
+
+'''
+	Time Complexity: O(n+n) ~ O(n)
+	Space Complexity: O(1) 
+
+'''
+
+
+# 3. Optimal Approach
+
+def sort_arr(arr):
+
+	low = mid = 0
+	high = len(arr)-1
+
+	while mid <= high:
+
+		if arr[mid] == 0:
+			arr[low], arr[mid] = arr[mid], arr[low]
+			low += 1
+			mid += 1
+
+		elif arr[mid] == 1:
+			mid += 1
+
+		else:
+			arr[high], arr[mid] = arr[mid], arr[high]
+			high -= 1
 
 
 '''
