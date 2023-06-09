@@ -29,7 +29,7 @@ def majority_element(arr):
 
 '''
 
-# 2. Better Approach
+# 2. Better Approach	---> [ Using Dictionary ]
 
 def majority_element(arr):
 
@@ -50,6 +50,30 @@ def majority_element(arr):
 	Space Complexity: O(n) 	
 
 '''
+
+# 3. Optimal Approach  	---> [ Moore's Voting Algorithm ]
+
+def majority_element(arr):
+
+	n = len(arr)
+	cnt = 0
+
+	for num in arr:
+
+		if cnt == 0:
+			cnt = 1
+			ele = num
+
+		elif ele == num:
+			cnt += 1
+
+		else:
+			cnt -= 1
+
+	return ele
+
+	# Works perfectly fine till here if it says that majority element always exists.
+	
 
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
