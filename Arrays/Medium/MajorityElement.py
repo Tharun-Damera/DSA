@@ -70,10 +70,25 @@ def majority_element(arr):
 		else:
 			cnt -= 1
 
-	return ele
-
 	# Works perfectly fine till here if it says that majority element always exists.
-	
+	# Otherwise	include the below to check if the 'ele' is the majority element.
+
+	cnt = 0
+	for num in arr:
+		if num == ele:
+			cnt += 1
+
+	if cnt > (n // 2):
+		return ele
+
+	return -1
+
+
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(1) 	
+
+'''
 
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
