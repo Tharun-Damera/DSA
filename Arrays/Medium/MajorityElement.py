@@ -24,10 +24,12 @@ def majority_element(arr):
 	return -1
 
 '''
-	Time Complexity: O(n) 
-	Space Complexity: O(n) 	
+	Time Complexity: O(n^2) 
+	Space Complexity: O(1) 	
 
 '''
+
+
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
 
