@@ -29,6 +29,27 @@ def majority_element(arr):
 
 '''
 
+# 2. Better Approach
+
+def majority_element(arr):
+
+	freq = {}
+	n = len(arr)
+
+	for num in arr:
+		freq[num] = freq.get(num, 0) + 1
+
+	for key, value in freq.items():
+		if value > (n // 2):
+			return key
+
+	return -1
+
+'''
+	Time Complexity: O(n) 
+	Space Complexity: O(n) 	
+
+'''
 
 
 arr = [int(i) for i in input('\nEnter array elements (space separated): ').split()]
